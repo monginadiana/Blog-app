@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.topbar {
+  background: #79B9D2;
+  color: #fff;
+  width: 100%;
+  z-index: 9999;
+  padding: 5px 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topbar h1 {
+  cursor: pointer;
+}
+.topbar nav {
+  margin-top: 25px;
+}
+.topbar nav ul {
+  padding: 0;
+  margin: 0;
+}
+.topbar nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+.topbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+ul.post-grid {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.post-grid li {
+  padding: 20px;
+  cursor: pointer;
+  transition: background linear 0.5s;
+  border-bottom: 1px solid #3a8bab;
+}
+ul.post-grid li:hover {
+  background: #3a8bab;
+  color: #fff;
+}
+ul.post-grid li:hover h3 {
+  color: #fff;
+}
+.content {
+  width: 100%;
+  position: relative;
+  padding: 20px 40px;
+}
+h2,
+h3 {
+  color: #3a8bab;
+}
+.post {
+  transition: 0.5s linear all;
+  opacity: 1;
+  padding-bottom: 30px;
+}
+.post cite {
+  display: inline-block;
+  padding: 10px 0;
+}
+.comments ul {
+  margin: 0;
+  padding: 0;
+}
+.comments ul li {
+  list-style-type: none;
+  padding: 20px 5px;
+  border-bottom: 1px #79B9D2 solid;
+}
+.post.ng-hide {
+  opacity: 0;
+}
+.post.ng-hide-add,
+.post.ng-hide-remove {
+  display: block !important;
+}
+form {
+  width: 100%;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+.ng-valid.ng-dirty {
+  border-color: green;
+}
+img {
+  max-width: 100%;
 }
