@@ -6,7 +6,7 @@ export default function SingleBlog(){
   const [SingleBlog, setSingleBlog] = useState({})
   const {id} = useParams()
     useEffect(() => {
-        fetch(`http://localhost:9292/blogs/${id}`)
+        fetch(`https://dees-blogg-app.herokuapp.com/blogs/${id}`)
         .then(res => res.json())
         .then(data => setSingleBlog(data))
     }, [])

@@ -11,7 +11,7 @@ function App() {
 
   const [blogs, setBlogs] = useState([])
 
-  const url = "http://localhost:9292/blogs"
+  const url = "https://dees-blogg-app.herokuapp.com/blogs"
 
 
   useEffect(() => {
