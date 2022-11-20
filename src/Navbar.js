@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export default function Navbar(){
     return (
@@ -7,8 +8,8 @@ export default function Navbar(){
           
             <nav role="navigation" class="push-right">
               <ul>
-                <li><a href="#11">See All Posts</a></li>
-                <li><a href="#1" >Add New Post</a></li>
+                <li><Link to="/">See All Posts</Link></li>
+                <li>< Link to="/newBlog" >Add New Post</Link></li>
               </ul>
             </nav>
         

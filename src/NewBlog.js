@@ -9,11 +9,11 @@ export default function NewBlog(){
               <textarea ng-list="/\n/" rows="10"></textarea>
               <br/>
               <label for="">Featured Image URL</label>
-              <br/>
+              <br/><br/>
               <input type="text"  placeholder="http://placekitten.com/g/2000/600" />
               <br/>
               <label for="">by:</label>
-              <br/>
+              <br/><br/>
               <input type="text"  placeholder="Author Name" required />
               <br/>
 

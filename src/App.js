@@ -14,7 +14,6 @@ function App() {
     <Navbar/>
     <Routes>
     <Route exact path="/" element={<Blog/>}/>
-    <Route exact path="/comment" element={<Comment/>}/>
     <Route exact path="/newBlog" element={<NewBlog/>}/>
     <Route exact path="/blog/:id" element={<SingleBlog/>}/>
     </Routes>
