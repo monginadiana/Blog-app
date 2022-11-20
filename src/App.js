@@ -24,7 +24,7 @@ function App() {
 
   function addBlog(blog){
     console.log(blog);
-   
+    setBlogs([...blogs, blog])
   }
 
   return (

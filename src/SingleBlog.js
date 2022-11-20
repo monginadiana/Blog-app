@@ -1,18 +1,28 @@
+import { useEffect,useState } from "react"
+import { useParams } from "react-router-dom";
 import Comment from "./Comment"
 export default function SingleBlog(){
+
+  const [SingleBlog, setSingleBlog] = useState({})
+  const {id} = useParams()
+    useEffect(() => {
+        fetch(`http://localhost:9292/blogs/${id}`)
+        .then(res => res.json())
+        .then(data => setSingleBlog(data))
+    }, [])
     return (
         <div className="singleB">
-        <h2>Men's Mental Health</h2>
-        <img className="image" alt="#1" src="https://thumbs.dreamstime.com/b/blog-information-website-concept-workplace-background-text-view-above-127465079.jpg"/>
+        <h2>{SingleBlog.title}</h2>
+        <img className="image" alt="#1" src={SingleBlog.image}/>
          
          <cite style={{marginTop : "15px"}}>By Diana on 20/11/2022 </cite>
          <div class="post-body">
            <p>
-            Improved caution amongst citizens
+           {SingleBlog.body}
            </p>
          </div>
       
-       <button class=" likes fa fa-heart" > 0</button>
+       <button class=" likes fa fa-heart" > {SingleBlog.likes} </button>
        <div>
         <Comment/>
        </div>

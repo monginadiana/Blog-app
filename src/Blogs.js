@@ -7,7 +7,7 @@ export default function Blog({blogs}){
           {
           blogs.map(blog => {
                     return <BlogList key={blog.id} title={blog.title} body={blog.body} 
-                    date={blog.created_at} image={blog.image} likes={blog.likes} />
+                    date={blog.created_at} image={blog.image} likes={blog.likes} id={blog.id}/>
                 })
           }
           
