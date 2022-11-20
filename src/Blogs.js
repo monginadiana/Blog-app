@@ -1,4 +1,4 @@
-export default function Blog(){
+export default function Blog({blogs}){
     return (
         <div class="blog">
             <ul class="post-grid" >
