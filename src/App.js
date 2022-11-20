@@ -24,7 +24,7 @@ function App() {
 
   function addBlog(blog){
     console.log(blog);
-    setBlogs([...blogs, blog])
+   
   }
 
   return (
@@ -32,7 +32,7 @@ function App() {
   
     <Navbar/>
     <Routes>
-    <Route exact path="/" element={<Blog blog={blogs}/>} />
+    <Route exact path="/" element={<Blog blogs={blogs}/>} />
     <Route exact path="/newBlog" element={<NewBlog addBlog={addBlog}/>} />
     <Route exact path="/blog/:id" element={<SingleBlog/>}/>
     </Routes>
