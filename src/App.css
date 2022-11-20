@@ -18,6 +18,19 @@ html {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 50px;
+}
+ .likes{
+   width: 45px;
+   height: 25px;
+   text-align: center;
+ }
+.singleB{
+  margin: 70px;
+  margin-top: 20px !important;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .emoji{
@@ -26,6 +39,11 @@ html {
   justify-content: space-between;
   align-items: center;
   
+}
+.image{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .topbar {
@@ -81,6 +99,15 @@ ul.post-grid li:hover h3 {
 h2,
 h3 {
   color: #3a8bab;
+}
+.new{
+
+  margin: 70px;
+  margin-top: 20px !important;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
 }
 .post {
   transition: 0.5s linear all;
