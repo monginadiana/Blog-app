@@ -1,37 +1,20 @@
 
 import './App.css';
 import Navbar from './Navbar';
+import Blog from './Blogs';
 
 function App() {
   return (
     <div className="App">
-  <body ng-app="blogApp">
-  <div ng-controller="BlogController as blog">
+  {/* <body ng-app="blogApp">
+  <div ng-controller="BlogController as blog"> */}
     <Navbar/>
+    <Blog/>
 
     <div class="content">
       <div class="container">
         <div class="row">
-          <ul class="post-grid" ng-show="blog.isSelected('blog')">
-            <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{'reset-s' : $index%3==0}" ng-click="blog.selectTab($index)">
-              <h3>post.title</h3>
-              <p>post.body[0] | limitTo:70...</p>
-              <p class="fa fa-comment push-left">post.comments.length</p>
-              <p class="fa fa-heart push-right">post.likes</p>
-            </li>
-          </ul>
-          <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
-            <div>
-              <h2>post.title</h2>
-         
-              <cite>by post.author on post.createdOn | date</cite>
-              <div class="post-body">
-                <p ng-repeat="paragraph in post.body">
-                  paragraph
-                </p>
-              </div>
-              <div class="comments" ng-controller="CommentController as commentCtrl">
-                <button class="fa fa-heart" ng-click="post.likes = post.likes+1">post.likes</button>
+          
                 <h3>Comments</h3>
                 <ul>
                   <li ng-repeat="comment in post.comments">
@@ -63,13 +46,11 @@ function App() {
               <input type="submit" value="Submit" />
             </form>
           </div>
-        </div>
-      </div>
-    </div>
+      
   </div>
-</body>
+
      
-    </div>
+   
   );
 }
 
