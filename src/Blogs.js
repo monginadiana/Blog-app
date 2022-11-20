@@ -1,24 +1,46 @@
 export default function Blog(){
     return (
-        <div>
+        <div class="blog">
             <ul class="post-grid" >
             <li >
-              <h3>post.title</h3>
-              <p>post.body[0] | limitTo:70...</p>
-              <p class="fa fa-comment push-left">post.comments.length</p>
-              <p class="fa fa-heart push-right">post.likes</p>
+              <h3>Corona Virus</h3>
+              <p>Decreased number of corona virus...</p>
+              <div class="emoji">
+                <p><i class="fas fa-comment"></i> 3 comments </p>
+                <p> <i class="fas fa-heart"></i> 4 likes </p>
+              </div>
             </li>
           </ul>
-              <h2>post.title</h2>
-         
-              <cite>by post.author on post.createdOn | date</cite>
-              <div class="post-body">
-                <p>
-                  paragraph
-                </p>
+          
+          <ul class="post-grid" >
+            <li >
+              <h3>Corona Virus</h3>
+              <p>Decreased number of corona virus...</p>
+              <div class="emoji">
+                <p><i class="fas fa-comment"></i> 3 comments </p>
+                <p> <i class="fas fa-heart"></i> 4 likes </p>
               </div>
-           
-            <button class="fa fa-heart" >post.likes</button>
+            </li>
+          </ul>
+
+          <ul class="post-grid" >
+            <li >
+              <h3>Corona Virus</h3>
+              <p>Decreased number of corona virus...</p>
+              <div class="emoji">
+                <p><i class="fas fa-comment"></i> 3 comments </p>
+                <p> <i class="fas fa-heart"></i> 4 likes </p>
+              </div>
+            </li>
+          </ul>
+
+
+          
+
+          
+
+          
+              
            
         </div>
     )
