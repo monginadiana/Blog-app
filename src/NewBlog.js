@@ -25,7 +25,7 @@ function handleSubmit(e){
   e.preventDefault()
 
 
-  fetch("http://localhost:9292/blogs", {
+  fetch("https://dees-blogg-app.herokuapp.com/blogs", {
       method:'POST', 
       headers:{'content-type' : 'application/json'},
       body: JSON.stringify(formData)
