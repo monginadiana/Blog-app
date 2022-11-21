@@ -1,15 +1,37 @@
 import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom";
-import Comment from "./Comment"
+import CommentList from "./CommentList";
+import CommentForm from "./CommentForm";
+
 export default function SingleBlog(){
 
   const [SingleBlog, setSingleBlog] = useState({})
+  
   const {id} = useParams()
     useEffect(() => {
         fetch(`https://dees-blogg-app.herokuapp.com/blogs/${id}`)
         .then(res => res.json())
         .then(data => setSingleBlog(data))
+
+        
     }, [])
+     function handleComments(comment){
+      const commentValue = {
+        comment: comment,
+        blog_id: SingleBlog.id,
+        user_id: 1,
+        
+      }
+      fetch("https://dees-blogg-app.herokuapp.com/comments", {
+      method:'POST', 
+      headers:{'content-type' : 'application/json'},
+      body: JSON.stringify(commentValue)
+  })
+      .then(res => res.json())
+      .then(data => console.log(data))
+  
+     }
+   
     return (
         <div className="singleB">
         <h2>{SingleBlog.title}</h2>
@@ -23,8 +45,11 @@ export default function SingleBlog(){
          </div>
       
        <button class=" likes fa fa-heart" > {SingleBlog.likes} </button>
+       
        <div>
-        <Comment/>
+      <CommentList id={SingleBlog.id} handleComments={handleComments}/>
+      <CommentForm  handleComments={handleComments}/>
+
        </div>
         </div>
         
