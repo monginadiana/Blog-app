@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Comment from "./Comment"
 
 export default function CommentList({id,  handleComments}) {
   const [singleComment, setsingleComment] = useState([]);
@@ -23,7 +22,7 @@ export default function CommentList({id,  handleComments}) {
       {filteredComments
         ? filteredComments.map((comment) => {
             console.log(comment);
-            return <Comment comment={comment.comment} key={comment.id} />;
+            return <li>{comment.comment}</li>
           })
         : <p>No comment available</p>}
  

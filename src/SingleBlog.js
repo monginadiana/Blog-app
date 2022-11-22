@@ -15,6 +15,7 @@ export default function SingleBlog(){
 
         
     }, [])
+
      function handleComments(comment){
       const commentValue = {
         comment: comment,
@@ -28,8 +29,18 @@ export default function SingleBlog(){
       body: JSON.stringify(commentValue)
   })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => {
+        window.location.reload()
+        alert("Successfully posted your comment")
+      })
   
+     }
+
+     function likePost(){
+      fetch("https://dees-blogg-app.herokuapp.com/likes", {
+      method:'POST', 
+      headers:{'content-type' : 'application/json'},
+      body: JSON.stringify(SingleBlog)
      }
    
     return (
@@ -44,7 +55,7 @@ export default function SingleBlog(){
            </p>
          </div>
       
-       <button class=" likes fa fa-heart" > {SingleBlog.likes} </button>
+       <button onClick={likePost} class=" likes fa fa-heart" > {SingleBlog.likes} </button>
        
        <div>
       <CommentList id={SingleBlog.id} handleComments={handleComments}/>
