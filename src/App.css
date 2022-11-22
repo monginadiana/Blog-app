@@ -14,6 +14,7 @@ html {
   justify-content: space-between;
   align-items: center;
   margin-right: 80px;
+  margin-top: -20px;
 }
 
 .register-container{
@@ -31,8 +32,9 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 10px
+  align-items: flex-start;
+  margin-top: 50px;
+
 }
 
 .main-login{
@@ -94,13 +96,13 @@ html {
   color: #fff;
   width: 100%;
   z-index: 9999;
-  padding: 5px 20px;
+  padding: 5px 5px;
 }
 .topbar h1 {
   cursor: pointer;
 }
 .topbar nav {
-  margin-top: -25px;
+  margin-top: 25px;
 }
 .topbar nav ul {
   padding: 0;

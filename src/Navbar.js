@@ -4,8 +4,7 @@ export default function Navbar({user, isLoggedIn, logout}){
     return (
     <div class="topbar">
       <div class="container navbar">
-            
-            <li><Link to="/"><h1 class="push-left" >Mongina's Blog App</h1></Link></li>
+      <li><Link to="/"><h1 class="push-left" >Mongina's Blog App</h1></Link></li>
           
             <nav role="navigation" class="push-right">
               <ul>{
