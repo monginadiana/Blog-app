@@ -54,8 +54,8 @@ export default function Register({getUserData}){
 
     return(
         <>
-        <div className="container m-5">
-            <div className="register-container">
+        <div className="container m-5 ">
+            <div className="auth-container">
                 
                 <div className="main-register">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -129,10 +129,7 @@ export default function Register({getUserData}){
                     </form>
                 </div>
 
-                <div className="register-info">
-                    <h3 className="register-heading text-left mt-3">Create Account</h3>
-                   
-                </div>
+               
             </div>
         </div>
     </>

@@ -116,7 +116,7 @@ export default function Login({getUserData}) {
               </div>
               <div className="recover">
                 <p className="mt-4">
-                Don't have a Nairobnb account? <Link className="create" to="/register"> Register here!</Link>
+                Don't have an account? <Link className="create" to="/register"> Register here!</Link>
                 </p>
               </div>
             </div>
