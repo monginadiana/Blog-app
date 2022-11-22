@@ -51,7 +51,6 @@ export default function SingleBlog({user}){
      })
      .then(res => res.json())
       .then(data => {
-        console.log(data);
           setSingleBlog(data)
         })
      }

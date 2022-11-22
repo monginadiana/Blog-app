@@ -1,14 +1,14 @@
  import { useState } from "react"
  import {useNavigate} from 'react-router-dom';
 
-export default function NewBlog({addBlog}){
+export default function NewBlog({addBlog, user}){
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
     body: "",
     likes: 0,
     image: "",
-    user_id: 1
+    user_id: user.id
 })
 
 function handleInput(e){
@@ -43,7 +43,7 @@ function handleSubmit(e){
       user_id: 1
   })
 
-  navigate("/")
+  navigate("/home")
  
  }
     return(
@@ -59,9 +59,6 @@ function handleSubmit(e){
               <br/><br/>
               <input type="text" value={formData.image} onChange={handleInput} placeholder="http://placekitten.com/g/2000/600" name="image" />
               <br/>
-              <label for="">by:</label>
-              <br/><br/>
-              <input type="text" value={formData.Author} onChange={handleInput} placeholder="Author Name" name="author" required />
               <br/>
 
               <input type="submit" value="Submit" />
