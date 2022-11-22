@@ -2,7 +2,7 @@ import BlogList from "./BlogList"
 
 export default function Blog({blogs}){
     return (
-        <div class="blog">
+        <div className="blog">
           
           {
           blogs.map(blog => {

@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 
 export default function Navbar({user, isLoggedIn, logout}){
     return (
-    <div class="topbar">
-      <div class="container navbar">
-      <li><Link to="/"><h1 class="push-left" >Mongina's Blog App</h1></Link></li>
+    <div className="topbar">
+      <div className="container navbar">
+      <li><Link to="/"><h1 className="push-left" >Mongina's Blog App</h1></Link></li>
           
-            <nav role="navigation" class="push-right">
+            <nav role="navigation" className="push-right">
               <ul>{
                 isLoggedIn?
                 <ul>

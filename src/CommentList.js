@@ -21,7 +21,6 @@ export default function CommentList({id,  handleComments}) {
 
       {filteredComments
         ? filteredComments.map((comment) => {
-            console.log(comment);
             return <li>{comment.comment}</li>
           })
         : <p>No comment available</p>}

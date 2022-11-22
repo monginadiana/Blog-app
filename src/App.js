@@ -63,7 +63,7 @@ function App() {
       !isLoggedIn ? <Navigate to="/login" /> : <Navigate to="/home" /> } />
     <Route exact path="/home" element={<Blog blogs={blogs}/>} />
     <Route exact path="/newBlog" element={<NewBlog addBlog={addBlog}/>} />
-    <Route exact path="/blog/:id" element={<SingleBlog user={user.id}/>}/>
+    <Route exact path="/blog/:id" element={<SingleBlog user={user}/>}/>
     <Route exact path="/login" element={<Login isLoggedIn={isLoggedIn} getUserData={getUserData} />} />
     <Route exact path="/register" element={<Register isLoggedIn={isLoggedIn} getUserData={getUserData} />} />
     </Routes>
